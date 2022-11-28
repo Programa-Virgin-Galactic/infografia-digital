@@ -113,7 +113,7 @@
                         <h4 class="text mt-5">3. Bienvenida al espacio</h4>
 
                         <p>
-                            Después de aproximadamente 1 minuto, lo pilotos apagarán el motor del cohete y se podrá apreciar por la ventana como cambia de color azul a negro, lo que indiaría su llegada al espacio. Acá se podrá desabrochar
+                            Después de aproximadamente 1 minuto, lo pilotos apagarán el motor del cohete y se podrá apreciar por la ventana como cambia de color azul a negro, lo que indicaría su llegada al espacio. Acá se podrá desabrochar
                             los cinturones de seguridad y flotar sin esfuerzo fuera de su asiento gracias a la microgravedad existente. La cabina cuenta con 17 ventanas donde se podrán apreciar las increíbles vistas de la Tierra.
                         </p>
                         <h4 class="text mt-5">4. Tecnología de pluma</h4>
@@ -122,7 +122,7 @@
                             En esta etapa, la nave se prepara para entrar nuevamente a la atmósfera terrestre, utilizando la innovación del sistema de vuelo: tecnología de plumas. En el espacio, la nave espacial se dobla por la mitad, con
                             las alas moviéndose hacia arriba mientras los pilotos voltean la nave con las ventanas apuntando directamente hacia la Tierra. Esta maniobra permite que la nave sea como una cápsula en la reentrada, repartiendo
                             el calor de la fricción por la parte inferior de la nave y permitiéndole reorientarse aerodinámicamente. Una vez nuevamente en la atmósfera terrestre, las alas vuelven a bajar, permitiendo que la nave se deslice
-                            con seguridad y suvidad hacia la misma pista de la que despegó.
+                            con seguridad y suavidad hacia la misma pista de la que despegó.
                         </p>
                         <h4 class="text mt-5">5. Vuelta a la tierra</h4>
 
@@ -236,7 +236,7 @@
                             naves reutilizables por medio de descensos controlados por propulsión luego de los lanzamientos.
                         </p>
                         <p>
-                            Space x es otra compañía estadounidense del magnate Elon Musk dedicada a la fabricación aeroespacial y servicios de transporte espacial. Su objetivo es reducir los costos de viajar al espacio para facilitar la
+                            Space X es otra compañía estadounidense del magnate Elon Musk dedicada a la fabricación aeroespacial y servicios de transporte espacial. Su objetivo es reducir los costos de viajar al espacio para facilitar la
                             colonización de Marte.
                         </p>
                     </div>
@@ -244,29 +244,66 @@
             </div>
         </section>
 
+         <!-- * * * * * * * * *
+            COPIE DESDE ACÁ
+        * * * * * * * * * * -->
+
         <aside>
             <div class="container">
-                <div class="row py-3">
-                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                        <p class="small text-muted">
-                            Pendiente para igualarlo entre los grupos.
-                        </p>
+                <div class="row py-5">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto small">
+                        <dl>
+                            <dt>Créditos:</dt>
+                            <dd>
+                                Infografía digital desarrollada por <a href="#" class="link-secondary">Amaya Butrón</a>,<a href="#" class="link-secondary">Juan Pablo Catalán</a>, <a href="#" class="link-secondary">María Gracia Hoyl</a>,
+                                <a href="#" class="link-secondary">Teresita Varas</a>.
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Fuentes de información:</dt>
+                            <dd>
+                                La información presentada se apoya en consultas a <a href="#" class="link-secondary">Título del recurso</a>, <a href="#" class="link-secondary">Título del recurso</a>,
+                                <a href="#" class="link-secondary">Título del recurso</a>, <a href="#" class="link-secondary">Título del recurso</a>, <a href="#" class="link-secondary">Título del recurso</a>.
+                            </dd>
+                        </dl>
+                        <h4 class="border-top pt-4 my-5 fs-5">Historias relacionadas</h4>
+                        <ul id="relacionadas" class="list-unstyled fst-italic"></ul>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <footer>
+        <footer class="bg-black">
             <div class="container">
                 <div class="row py-3">
-                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                        <p class="small text-muted">
-                            Pendiente para igualarlo entre los grupos.
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto small">
+                        <p class="d-flex justify-content-between small py-2 m-0">
+                            <a href="https://github.com/profesorfaco/dno075-2022-2/tree/main/clase-17" class="link-light" target="_blank">Lunes 28 de noviembre, 2022</a>
+                            <a href="https://github.com/profesorfaco/dno075-2022-2/#readme" class="link-light" target="_blank">Infografía Digital</a>
+                            <a href="https://diseno.uc.cl/" class="link-light" target="_blank">Diseño UC</a>
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
+
+        <script>
+            async function otras() {
+                const consulta = await fetch("https://raw.githubusercontent.com/profesorfaco/dno075-2022-2/main/clase-17/data.json");
+                const data = await consulta.json();
+                const listado = document.getElementById("relacionadas");
+                data.forEach((x, i) => {
+                    if (i != 5) {
+                        listado.innerHTML += '<li class="position-relative"><dl><dt>' + x.title + ': ' + x.subtitle + '</dt><dd class="small">' + x.short + ' <a href="' + x.url + '" class="fst-normal link-secondary stretched-link">[ver más]</a></dd><dl>';
+                    }
+                });
+            }
+            otras().catch((error) => console.error(error));
+        </script>
+
+        <!-- * * * * * * * * *
+            COPIE HASTA ACÁ
+        * * * * * * * * * * -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
 </html>

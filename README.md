@@ -1,1 +1,1 @@
-# clase-17
+# infografia-digital
